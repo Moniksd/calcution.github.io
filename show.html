@@ -1,0 +1,67 @@
+
+<html language = "en">
+ <head>
+    <meta charset= "UTF-8">
+    <meta name = "viewport" , content ="width=device-width , intail-scale=1"/>
+    <link rel = "stylesheet" type ="text/css" media="screen" href="style.css">
+    <header>
+    <h1 class="logo"></h1>
+    <nav>
+        <a href="show.html"><img src = "images/Amazon-logo-black-template.png" width="150" width="150"></a>
+    
+  </header>
+  <body>
+    <script type="text/javascript">
+        function fun1()
+        {
+            var a = parseFloat(document.getElementById('number_CASE').value);
+            document.getElementById('Ideal_time').innerHTML = a * 2.5 ;
+        }
+        function func2()
+        {
+            var b = parseFloat(document.getElementById('number_CASE').value);
+            var c = parseFloat(document.getElementById('Time_taken').value);
+            document.getElementById('THP').innerHTML = b/c ;
+        }
+        function func3()
+        {
+            var d = parseFloat(document.getElementById('Time_taken').value);
+            var e = parseFloat(document.getElementById('number_CASE').value);
+            var f = e * (2.5/60);
+            document.getElementById('Efficiency').innerHTML = (f/d)*100;
+        }
+    </script>
+    <div class="form-center">
+    <form action=" " method="get">
+        <div class="input-field">
+        <input type="text" id="User_Id" required />
+        <label for="User_Id"><strong>User_Id</strong></label>
+        </div>
+        <div class="input-field">
+        <input type="number" id="number_CASE" required />
+        <label for="number_CASE"><strong>No of cases</strong></label>
+        </div>
+        <div class="input-field">
+        <input type="number" id="Time_taken" required />
+        <label for="Time_taken"><strong>Time_taken</strong></label>
+        </div>
+        <div class="input-field">
+        <input type="number" id="Input_time" required />
+        <label for="Input_time"><strong>Input_time</strong></label>
+        </div>
+        <b> Ideal_time: </b><br>
+        <span id = "Ideal_time"></span><br>
+        <input type = "button" value= "Ideal_time" onclick="return fun1()" style="height:25px; width:150px" ><br>
+        <b> THP: </b><br>
+        <span id = "THP"></span><br>
+        <input type = "button" value = "THP" onclick="return func2()" style="height: 25px; width:150px"><br>
+        <b> Efficiency: </b><br>
+        <span id = "Efficiency"></span><br>
+        <input type = "button" value = "Efficiency" onclick="return func3()" style="height:25px; width:150px" ><br>
+    
+    </form>
+    </div>
+      </body> 
+      </head>
+      </html>
+    
